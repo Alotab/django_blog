@@ -1,0 +1,107 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+
+        <!------------------------Main Content Container ------->
+        <div class="container">
+
+            <!-------------------------  Left-Sidebar --------------->
+            <div class="left-sidebar">
+                <div class="imp-links">
+                    <a href="#"><img src="med/profile-pic.png">Trending News</a>
+                    <a href="#"><img src="med/profile-pic.png">Book Shop</a>
+                    <a href="#"><img src="med/profile-pic.png">Groups</a>
+                    <a href="#"><img src="med/profile-pic.png">Jobs</a>
+                    <a href="#"><img src="med/profile-pic.png">Politics</a>
+                    <a href="#">See More</a>
+
+                </div>
+                <div class="shotcut-links">
+                    <p>Projects</p>
+                    <a href="#"><img src="med/profile-pic.png">Web Development</a>
+                    <a href="#"><img src="med/profile-pic.png">Django Dev</a>
+                    <a href="#"><img src="med/profile-pic.png">Full Stack</a>
+                    <a href="#"><img src="med/profile-pic.png">Data Science</a>
+                </div>
+            </div>
+
+
+            <!-------------------------  Main Content --------------->
+
+            <div class="main-content">
+
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <!-- <img src="med/profile-pic.png"> -->
+                        <div>
+                            <p>{{post.author}}</p>
+                            <small>Public</small>
+                        </div>
+                    </div>
+                    <div class="post-input-container">
+                        <textarea rows="3" placeholder="what's on your mind?"></textarea>
+                        <div class="add-post-links">
+                            <!--  <a href="#"><img src="med/profile-pic.png">Photo</a> -->
+                            <!-- <a href="#"><img src="med/profile-pic.png">Feeling/Activity</a> -->
+                            <a href="#">Submit Post</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <!-- <img src="med/profile-pic.png"> -->
+                            <div>
+                                <p>{{post.author}}</p>
+                                <small>June 24 2022, 13:00pm</small>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="post-text">{{ post.content }}</p>
+                <!--  <img src="med/profile-pic.png" class="post-img"> -->
+                </div>
+            </div>
+
+
+
+            <!-------------------------  Right-Sidebar --------------->
+
+            <div class="right-sidebar">
+                <div class="sidebar-title">
+                    <h4>Events</h4>
+                    <a href="#">See All</a>
+                </div>
+
+                <div class="event">
+                    <div class="left-event">
+                        <h3>18</h3>
+                        <span>March</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Social Media</h4>
+                        <p>Wilsson Tech</p>
+                        <a href="#">More Info</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    {% endfor %}
+
+{% endblock %}
+
+    

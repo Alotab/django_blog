@@ -1,10 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post-Django</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   
    
 </head>
 <body>
@@ -29,130 +34,19 @@
       
     </nav>
 
-    <!------------------------Main Content Container ------->
-    <div class="container">
+    <main role="main" class="container"></main>
+        <div class="row sideway">
+            <div class="col-md-8">
 
-        <!-------------------------  Left-Sidebar --------------->
-        <div class="left-sidebar">
-            <div class="imp-links">
-                <a href="#"><img src="med/profile-pic.png">Trending News</a>
-                <a href="#"><img src="med/profile-pic.png">Book Shop</a>
-                <a href="#"><img src="med/profile-pic.png">Groups</a>
-                <a href="#"><img src="med/profile-pic.png">Jobs</a>
-                <a href="#"><img src="med/profile-pic.png">Politics</a>
-                <a href="#">See More</a>
+
+
+                {% block content%} {% endblock %}
 
             </div>
-            <div class="shotcut-links">
-                <p>Projects</p>
-                <a href="#"><img src="med/profile-pic.png">Web Development</a>
-                <a href="#"><img src="med/profile-pic.png">Django Dev</a>
-                <a href="#"><img src="med/profile-pic.png">Full Stack</a>
-                <a href="#"><img src="med/profile-pic.png">Data Science</a>
-            </div>
-        </div>
+        </div>  
+    </main>
 
-
-        <!-------------------------  Main Content --------------->
-
-        <div class="main-content">
-
-            <div class="write-post-container">
-                <div class="user-profile">
-                    <!-- <img src="med/profile-pic.png"> -->
-                    <div>
-                        <p>John Nelson</p>
-                        <small>Public</small>
-                    </div>
-                </div>
-                <div class="post-input-container">
-                    <textarea rows="3" placeholder="what's on your mind?"></textarea>
-                    <div class="add-post-links">
-                        <!--  <a href="#"><img src="med/profile-pic.png">Photo</a> -->
-                        <!-- <a href="#"><img src="med/profile-pic.png">Feeling/Activity</a> -->
-                        <a href="#">Submit Post</a>
-
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="post-container">
-                <div class="post-row">
-                    <div class="user-profile">
-                        <!-- <img src="med/profile-pic.png"> -->
-                        <div>
-                            <p>John Nelson</p>
-                            <small>June 24 2022, 13:00pm</small>
-                        </div>
-                    </div>
-                </div>
-                <p class="post-text">
-                    Subsscribe <span>@Django</span> Youtube channel to learn more about backend develpment
-                    <a href="#">#Django</a> <a href="#">#DjangVsReact</a>
-                </p>
-               <!--  <img src="med/profile-pic.png" class="post-img"> -->
-
-
-            </div>
-
-
-            <div class="post-container">
-                <div class="post-row">
-                    <div class="user-profile">
-                       <!--  <img src="med/profile-pic.png">  -->
-                        <div>
-                            <p>John Nelson</p>
-                            <span>June 24 2022, 13:00pm</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="post-text">
-                    Subsscribe <span>@Django</span> Youtube channel to learn more about backend develpment
-                    <a href="#">#Django</a> <a href="#">#DjangVsReact</a>
-                </p>
-               <!-- <img src="med/profile-pic.png" class="post-img"> -->
-
-
-            </div>
-
-
-
-
-
-
-        </div>
-
-
-
-        <!-------------------------  Right-Sidebar --------------->
-
-        <div class="right-sidebar">
-            <div class="sidebar-title">
-                <h4>Events</h4>
-                <a href="#">See All</a>
-            </div>
-
-            <div class="event">
-                <div class="left-event">
-                    <h3>18</h3>
-                    <span>March</span>
-                </div>
-                <div class="right-event">
-                    <h4>Social Media</h4>
-                    <p>Wilsson Tech</p>
-                    <a href="#">More Info</a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-    </div>
+   
 
     <footer class="footer">
         <p>Copyright 2022 - Post-Django Hub Worldwide</p>
